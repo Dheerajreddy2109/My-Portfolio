@@ -10,10 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Protest Revolution", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
+   
 }
 
 body {
@@ -21,6 +18,10 @@ body {
     color: black;
     width: 100%;
     overflow-x: hidden;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     min-height: 200vh;
 }
 
@@ -29,7 +30,7 @@ body {
 
 
 .header{
-    position: fixed;
+    position:fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -39,6 +40,7 @@ body {
     align-items: center;
     z-index: 100;
 }
+
 .header::before{
     content: "";
     position: absolute;
@@ -103,7 +105,7 @@ a.active {
 }
 
 
-.icon  a:hover {
+.icon a:hover {
     /* color: #FAFCFF; */
     color: rgb(255, 255, 255);
 
@@ -199,11 +201,23 @@ input:checked+.slider:before {
     transition: 0.7s;
     transition-delay: 0.2s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform: translateY(-50px);
+
     /* opacity: 0.7; */
 }
 
 
 /* <-------------------- nav bar End -----------> */
+
+
+
+
+
+
+/* <-------------------- index start -----------> */
+
+
+
 
 
 
@@ -231,7 +245,7 @@ input:checked+.slider:before {
 
     }
     .icons{
-    display:inline-flex ;        
+    display:block ;        
     }
     #check:checked~.icons #menu-btn{
         display: none;
