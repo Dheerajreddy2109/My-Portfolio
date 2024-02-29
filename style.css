@@ -1,0 +1,277 @@
+/* fonts start */
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Protest+Revolution&display=swap');
+/* fonts end */
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #fff;
+    color: black;
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 200vh;
+}
+
+
+/* <-------------------- nav bar start -----------> */
+
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: #f8e8e8; */
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+
+}
+.logo{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+
+}
+.navIcons ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.icon a{
+    margin: 0px 25px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.icons{
+    position:absolute;
+    right: 5%;
+    font-size: 1.7rem;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+.icons #close-btn{
+    display: none;
+}
+#check{
+    display: none;
+}
+
+
+.dark-mode-toggle{
+    margin-left: 10px;
+}
+
+.icon:hover {
+    border-radius: 30px;
+    background-color: rgb(131, 131, 181);
+    text-align: center;
+    color: #fff;
+}
+a.active {
+    
+    font-size: 1.3rem;
+}
+
+
+.icon  a:hover {
+    /* color: #FAFCFF; */
+    color: rgb(255, 255, 255);
+
+}
+
+
+#toggleButton {
+    background-color: aqua;
+    color: #222;
+    border-radius: 30px;
+}
+
+/* to change darkmode */
+.dark-mode {
+    background-color: #232121;
+    color: white;
+    transition: 0.7s;
+    transition-delay: 0.2s;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+
+
+
+/* Dark mode toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    /* Reduced width */
+    height: 20px;
+    /* Reduced height */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c8c3c3;
+    /* Default background color */
+    -webkit-transition: .6s;
+    transition: .6s;
+    border-radius: 20px;
+    /* Adjusted border radius */
+
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    /* Reduced height */
+    width: 16px;
+    /* Reduced width */
+    left: 2px;
+    /* Adjusted position */
+    bottom: 2px;
+    /* Adjusted position */
+    background-color: rgb(0, 0, 0);
+    -webkit-transition: .6s;
+    transition: .6s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #fff3f3;
+    /* Dark mode background color */
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    /* Adjusted translation */
+    -ms-transform: translateX(20px);
+    /* Adjusted translation */
+    transform: translateX(20px);
+    /* Adjusted translation */
+}
+
+.scrolled {
+    background-color: #fff;
+    transition: 0.7s;
+    transition-delay: 0.2s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* opacity: 0.7; */
+}
+
+
+/* <-------------------- nav bar End -----------> */
+
+
+
+
+
+/* <-------------------- media query -----------> */
+
+/* Media query for iPad screens */
+/* Existing CSS styles */
+
+/* Media query for max-width 500px */
+
+@media only screen and (max-width: 992px) {
+
+    .header{
+        padding: .8rem 4%
+
+    }
+
+}
+@media only screen and (max-width: 758px) {
+
+    .header{
+        padding: .8rem 4%
+
+    }
+    .icons{
+    display:inline-flex ;        
+    }
+    #check:checked~.icons #menu-btn{
+        display: none;
+    }
+    #check:checked~.icons #close-btn{
+        display: block;
+    }
+    .navIcons{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: #dbdbdb;
+        /* box-shadow: #232121; */
+        transition: 0.5s ease-in-out;
+        overflow: hidden;
+    }
+    #check:checked~.navIcons{
+        height: 17rem ;
+        
+    }
+    .navIcons ul {
+        flex-direction: column;
+        list-style: none;
+        /* margin: 2rem 0px; */
+        text-align: center;
+    }
+    .navIcons li{
+        margin: 24px 0px;
+        text-decoration: none;
+        color: black;
+        transform: translateY(-50px);
+        transition: 0.5s ease-in-out;
+    }
+    #check:checked~.navIcons li{
+        transform: translateY(0);
+        
+        
+    }
+        
+
+}
