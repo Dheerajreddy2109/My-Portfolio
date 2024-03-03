@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(217, 177, 177);
+    /* min-height: 150vh; */
+    overflow-x: hidden;
+}
+main{
+    margin-top: 5rem;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    margin: 50px 0 0 0 ;
+    font-size: 4rem;
+}
+#winner{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+.heading{
+    font-size: 5rem;
+    text-align: center;
+}
+
+
+.container{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black */
+  
+    
+
+}
+.game{
+
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black */
+}
+.box{
+   
+    background-color: beige;
+    text-align: center;
+    color: black;
+    font-size: 3.5rem;
+    height: 18vmin;
+    width: 18vmin;
+    margin: 0px 5px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0px 30px  rgb(0,0, 0,0.5);
+}
+#reset-game{
+    height: 7vmin;
+    width: 15vmin;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0px 30px  rgb(0,0, 0,0.5);
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-right: 15px;
+    margin-bottom: 30px;
+
+}
+#new-game{
+    height: 7vmin;
+    width: 15vmin;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0px 30px  rgb(0,0, 0,0.5);
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+
+
+/* <-------------------- media query -----------> */
+
+
+@media  screen and (max-width : 499px) {
+    .game{
+
+        height: 60vmin;
+        width:80vmin;
+      
+        /* border: 2px solid black */
+    }
+    .heading{
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+.container{
+    height: 45vh;
+}
+
+#winner{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+.box{
+   
+    font-size: 2.5rem;
+    height: 18vmin;
+    width: 18vmin;
+    margin: 6px 6px;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0px 30px  rgb(0,0, 0,0.5);
+}
+#reset-game{
+    height: 8vmin;
+    width: 20vmin;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0px 30px  rgb(0,0, 0,0.5);
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight:400;
+    font-size: .7rem;
+   
+}
+#new-game{
+    height: 8vmin;
+    width: 20vmin;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0px 30px  rgb(0,0, 0,0.5);
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-weight:400;
+    font-size: .7rem;
+}
+
+
+
+       
+
+}
+

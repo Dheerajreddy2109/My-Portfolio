@@ -1,9 +1,9 @@
 const toggleButton = document.getElementById('darkModeToggle');
 const body = document.body;
 const header = document.querySelector("header");
-const navbar = document.querySelector("nav")
 const menu = document.querySelector("#menu-btn")
 const close = document.querySelector("#close-btn")
+const modeText = document.querySelector("#mode-text")
 let headerBG = "light"
 // body.classList.contains('dark-mode') ? "dark" : "light";
 
@@ -21,25 +21,26 @@ toggleButton.addEventListener('click', ()=> {
     if(headerBG === "light"){
         headerBG = "dark"
         header.style.backgroundColor = "#232121";
-        header.style.transition = "0.7s";
+        header.style.transition = "1s";
         header.style.color = "white";
-        navbar.style.backgroundColor = "#232121";
-        navbar.style.color = "white";
         menu.style.color = "white";
         close.style.color = "white";
+        modeText.innerText = "Light Mode"
     }
     else{
         headerBG = "light"
         header.style.backgroundColor = "#fff";
         header.style.color = "black"
-        header.style.transition = "0.7s"
-        navbar.style.backgroundColor = "#fff";
-        navbar.style.color = "black";
+        header.style.transition = "1s"
         menu.style.color = "black";
         close.style.color = "black";
+        modeText.innerText = "Dark Mode"
+
 
     }
 
+
+    
 });
 
 
