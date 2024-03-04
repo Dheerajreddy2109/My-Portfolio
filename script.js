@@ -5,7 +5,7 @@ const menu = document.querySelector("#menu-btn")
 const close = document.querySelector("#close-btn")
 const modeText = document.querySelector("#mode-text")
 let headerBG = "light"
-// body.classList.contains('dark-mode') ? "dark" : "light";
+
 
 
 
@@ -42,7 +42,6 @@ toggleButton.addEventListener('click', ()=> {
 
     
 });
-
 
 
 

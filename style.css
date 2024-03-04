@@ -121,12 +121,7 @@ body {
     margin-left: 10px;
 }
 
-.icon:hover {
-    border-radius: 30px;
-    /* text-align: center; */
-    /* font-size: 1.3rem; */
-    
-}
+
 a.active {
     
     font-size: 1.3rem;
@@ -134,8 +129,8 @@ a.active {
 }
 
 
-.icon a:hover {
-    color: rgb(0, 0, 0);
+.dark-mode .icon a:hover {
+    color: #FF312E;
 
 }
 
