@@ -16,32 +16,46 @@ window.addEventListener("scroll",()=>{
 
 
 
-toggleButton.addEventListener('click', ()=> {
+
+const forAllLocal = ()=>{
     body.classList.toggle('dark-mode');
+    header.classList.toggle('dark-mode');
+    menu.classList.toggle('dark-mode');
+    close.classList.toggle('dark-mode');
     if(headerBG === "light"){
-        headerBG = "dark"
-        header.style.backgroundColor = "#232121";
-        header.style.transition = "1s";
-        header.style.color = "white";
-        menu.style.color = "white";
-        close.style.color = "white";
+        headerBG = 'dark'
         modeText.innerText = "Light Mode"
+        localStorage.setItem("enabeledDark",'true');
     }
     else{
         headerBG = "light"
-        header.style.backgroundColor = "#fff";
-        header.style.color = "black"
-        header.style.transition = "1s"
-        menu.style.color = "black";
-        close.style.color = "black";
         modeText.innerText = "Dark Mode"
-
-
+        localStorage.removeItem("enabeledDark")
+        
     }
+};
+
+toggleButton.addEventListener('click',forAllLocal);
+
+window.addEventListener("DOMContentLoaded", ()=>{
+    const localDark = localStorage.getItem("enabeledDark")
+    if(localDark === 'true'){
+        forAllLocal();
+        
+        
+    }
+    toggleButton.checked = localDark === 'true';  
 
 
-    
 });
+
+
+
+
+
+
+
+
 
 
 
