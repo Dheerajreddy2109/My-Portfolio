@@ -125,7 +125,7 @@ body {
 a.active {
     
     font-size: 1.3rem;
-    border-bottom: 2px solid #000000 ;
+    border-bottom: 2px solid #ff0000 ;
 }
 .dark-mode a.active {
     
@@ -150,7 +150,7 @@ a.active {
 
 /* to change darkmode */
 .dark-mode {
-    background-color: #333138;
+    background-color:#333138;
     color: white;
     transition: 1s;
     transition-delay: .1s;
@@ -160,8 +160,6 @@ a.active {
 .dark-mode a {
     color: white;
 }
-
-
 
 
 
