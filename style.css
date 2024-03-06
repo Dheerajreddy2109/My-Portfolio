@@ -38,6 +38,9 @@ body {
     font-style: normal;
     min-height: 150vh;
 }
+h1 ,h2, h3, h4{
+    color: rgb(248, 99, 99);
+}
     
 /* a{
     text-decoration: none;
@@ -83,7 +86,7 @@ body {
 .logo{
     font-size: 1.8rem;
     text-decoration: none;
-    color: black;
+    color: rgb(248, 99, 99);
     font-weight: 700;
 
 }
@@ -93,11 +96,15 @@ body {
     align-items: center;
     list-style: none;
 }
+
 .icon a{
-    margin: 0px 20px;
+    margin: 0px 26px;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 99px;
+    transition: .5s;
 }
 .icons{
     position:absolute;
@@ -124,17 +131,27 @@ body {
 a.active {
     
     font-size: 1.3rem;
-    border-bottom: 2px solid #ff0000 ;
+    background-color:rgb(248, 99, 99);
+    color: #ffffff;
 }
 .dark-mode a.active {
     
     font-size: 1.3rem;
-    border-bottom: 2px solid #fffefe ;
+    /* border-bottom: 2px solid #fffefe ; */
+    background-color:rgb(248, 99, 99);
+    color: #ffffff;
 }
 
 
 .dark-mode .icon a:hover {
-    color: #FF312E;
+    background-color:rgb(248, 99, 99);
+
+
+}
+.icon a:hover {
+    background-color:rgb(248, 99, 99);
+    color: white;
+
 
 }
 
@@ -240,9 +257,11 @@ input:checked+.slider:before {
 .index-top{
     display: flex;
     align-items: center;
-    height: 60vh;
-    /* background-color: #ff0000; */
+    height: 80vh;
     justify-content: space-between;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    margin-top: 2rem;
 }
 .top-left p{
     font-size: 2.5rem;
@@ -250,13 +269,19 @@ input:checked+.slider:before {
 }
 
 .top-right img{
-    height: 60vh;
     border-radius: 50px;
     height: 60vh;
 
-    
+}
 
-
+.top-left.show-animate .animate{
+    transform: translateX(-100%);
+}
+.top-left.show-animate .animate{
+    transform: translateX(0);
+}
+.top-left.show-animate p .animate{
+    transition: 1s;
 }
 
 
@@ -267,13 +292,9 @@ input:checked+.slider:before {
 
 
 
+/* <-------------------- home page end -----------> */
 
 
-
-
-
-
-/* <-------------------- home page start -----------> */
 
 
 
@@ -294,6 +315,7 @@ input:checked+.slider:before {
 .hrline{
     display: flex;
     justify-content: center;
+    margin: 2rem 0rem;
 }
 hr{
 
@@ -306,7 +328,7 @@ hr{
 
 /* <-------------------- media query -----------> */
 
-@media  screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
 
     .header{
         padding: .8rem 5%
@@ -330,11 +352,10 @@ hr{
             left: 0;
             width: 100%;
             height: 0;
-            background-color: #dbdbdb;
+            background-color: rgb(207, 173, 124);
             box-shadow: 0 10px 20px #232121;
             transition: 1s ease-in-out;
             border-bottom-right-radius: 30px;
-            border-bottom-left-radius: 30px;
             overflow: hidden;
         }
         #check:checked~.navIcons{
@@ -344,7 +365,6 @@ hr{
         .navIcons ul {
             flex-direction: column;
             list-style: none;
-            /* margin: 2rem 0px; */
             text-align: center;
         }
         .navIcons li{
@@ -360,8 +380,7 @@ hr{
             
         }
         .index-top{
-            /* border: 1px solid black; */
-            height: 25vh;
+            height: 35vh;
             
         }
         
@@ -378,12 +397,21 @@ hr{
     main{
         margin: 0  20px; 
     }
+    .project1 p{
+       
+        font-size: 1.5rem;
+
+     
+    }
+    hr{
+       width:  80%;
+    }
 
 }
 
 
 
-@media  screen and (max-width: 758px) {
+@media  screen and (width <= 425px) {
 
     .header{
         padding: .8rem 4%
@@ -408,11 +436,10 @@ hr{
         left: 0;
         width: 100%;
         height: 0;
-        background-color: #dbdbdb;
+        background-color: rgb(207, 173, 124);
         box-shadow: 0 10px 20px #232121;
         transition: 1s ease-in-out;
         border-bottom-right-radius: 30px;
-        /* border-bottom-left-radius: 30px; */
         overflow: hidden;
     }
     #check:checked~.navIcons{
@@ -422,14 +449,13 @@ hr{
     .navIcons ul {
         flex-direction: column;
         list-style: none;
-        /* margin: 2rem 0px; */
         text-align: center;
     }
     .navIcons li{
         margin: 24px 0px;
         text-decoration: none;
         color: black;
-        transform: translateY(-200px);
+        transform: translateY(-60px);
         transition: 0.5s ease-in-out;
     }
     #check:checked~.navIcons li{
@@ -440,8 +466,7 @@ hr{
 
 
     .top-right img{
-        height: 60vh;
-        border-radius: 25px;
+        border-radius: 15px;
         height: 20vh;
     
         
@@ -450,7 +475,7 @@ hr{
     }
     .index-top{
         /* border: 1px solid black; */
-        height: 15vh;
+        height: 25vh;
      
     }
     .top-left p{
@@ -459,12 +484,10 @@ hr{
     }
 
     /*-------------- work -----------*/
-    .project1{
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 4rem;
-        margin-top: 5rem;
+    .project1 p{
+       
+        font-size: .8rem;
+
      
     }
     main{
