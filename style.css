@@ -274,15 +274,6 @@ input:checked+.slider:before {
 
 }
 
-.top-left.show-animate .animate{
-    transform: translateX(-100%);
-}
-.top-left.show-animate .animate{
-    transform: translateX(0);
-}
-.top-left.show-animate p .animate{
-    transition: 1s;
-}
 
 
 
