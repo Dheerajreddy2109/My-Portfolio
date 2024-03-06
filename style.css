@@ -10,19 +10,17 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-   
 }
+   
+
 
 
 
 /* <--------------------main start -----------> */
 
 main {
-    padding-top: 100px;
+    padding-top: 150px;
     margin: 0  3rem; 
-    text-align: center;
-
-   
 }
 
 p {
@@ -31,7 +29,7 @@ p {
 }
 
 body {
-    background-color:rgb(222, 222, 222);
+    background-color:#FFFFFA;
     color: black;
     width: 100%;
     overflow-x: hidden;
@@ -40,6 +38,7 @@ body {
     font-style: normal;
     min-height: 200vh;
 }
+    
 /* a{
     text-decoration: none;
 } */
@@ -66,7 +65,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: rgb(222, 222, 222); /* Set background color as needed */
+    background-color: #FFFFFA; /* Set background color as needed */
     transition: top 0.7s; 
 }
 
@@ -95,7 +94,7 @@ body {
     list-style: none;
 }
 .icon a{
-    margin: 0px 25px;
+    margin: 0px 20px;
     text-decoration: none;
     color: black;
     font-weight: 500;
@@ -140,11 +139,6 @@ a.active {
 }
 
 
-#toggleButton {
-    background-color: aqua;
-    color: #222;
-    border-radius: 30px;
-}
 
 
 
@@ -227,10 +221,9 @@ input:checked+.slider:before {
 }
 
 .scrolled {
-    background-color: rgb(222, 222, 222) ;
-    transition: 0.7s;
-    transition-delay: 0.2s;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #FFFFFA ;
+    transition: .7s;
+    box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     
 }
 
@@ -238,6 +231,49 @@ input:checked+.slider:before {
 /* <-------------------- nav bar End -----------> */
 
 
+
+
+
+
+/* <-------------------- home page start -----------> */
+
+.index-top{
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    /* background-color: #ff0000; */
+    justify-content: space-between;
+}
+.top-left p{
+    font-size: 2.5rem;
+
+}
+
+.top-right img{
+    height: 60vh;
+    border-radius: 50px;
+    height: 60vh;
+
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <-------------------- home page start -----------> */
 
 
 
@@ -268,13 +304,6 @@ hr{
 
 
 
-
-
-
-
-
-
-
 /* <-------------------- media query -----------> */
 
 @media  screen and (max-width: 992px) {
@@ -282,6 +311,75 @@ hr{
     .header{
         padding: .8rem 4%
 
+    }
+    .icons{
+        display:block ;        
+        }
+    
+        #check:checked~.icons #menu-btn{
+            display: none;
+        }
+    
+        #check:checked~.icons #close-btn{
+            display: block;
+        }
+    
+        .navIcons{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #dbdbdb;
+            box-shadow: 0 10px 20px #232121;
+            transition: 1s ease-in-out;
+            border-bottom-right-radius: 30px;
+            border-bottom-left-radius: 30px;
+            overflow: hidden;
+        }
+        #check:checked~.navIcons{
+            height: 22rem ;
+            
+        }
+        .navIcons ul {
+            flex-direction: column;
+            list-style: none;
+            /* margin: 2rem 0px; */
+            text-align: center;
+        }
+        .navIcons li{
+            margin: 24px 0px;
+            text-decoration: none;
+            color: black;
+            transform: translateY(-50px);
+            transition: 1s ease-in-out;
+        }
+        #check:checked~.navIcons li{
+            transform: translateY(0);
+            
+            
+        }
+
+    .top-right img{
+        height: 60vh;
+        border-radius: 25px;
+        height: 30vh;
+    
+        
+    
+    
+    }
+    .index-top{
+        /* border: 1px solid black; */
+        height: 25vh;
+     
+    }
+    .top-left p{
+        font-size: 1.5rem;
+    
+    }
+    main{
+        margin: 0  10px; 
     }
 
 }
@@ -311,13 +409,14 @@ hr{
         width: 100%;
         height: 0;
         background-color: #dbdbdb;
-        /* box-shadow: #232121; */
-        transition: 0.5s ease-in-out;
+        box-shadow: 0 10px 20px #232121;
+        transition: 1s ease-in-out;
         border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
         overflow: hidden;
     }
     #check:checked~.navIcons{
-        height: 17rem ;
+        height: 22rem ;
         
     }
     .navIcons ul {
@@ -339,6 +438,26 @@ hr{
         
     }
 
+
+    .top-right img{
+        height: 60vh;
+        border-radius: 25px;
+        height: 20vh;
+    
+        
+    
+    
+    }
+    .index-top{
+        /* border: 1px solid black; */
+        height: 25vh;
+     
+    }
+    .top-left p{
+        font-size: 1rem;
+    
+    }
+
     /*-------------- work -----------*/
     .project1{
         display: flex;
@@ -349,12 +468,14 @@ hr{
      
     }
     main{
-        margin: 0  1.5rem; 
+        margin: 0  10px; 
     }
     hr{
 
         width:80%;
     }
+
+
 
         
 

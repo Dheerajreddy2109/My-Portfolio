@@ -4,6 +4,7 @@ const header = document.querySelector("header");
 const menu = document.querySelector("#menu-btn")
 const close = document.querySelector("#close-btn")
 const modeText = document.querySelector("#mode-text")
+const imgHome = document.querySelector(".top-right img")
 // let toggleSlider = document.querySelector("#toggleSlider");
 let headerBG = "light"
 
@@ -60,13 +61,15 @@ const forAllLocal = ()=>{
         header.style.color = "white";
         modeText.innerText = "Light Mode"
         localStorage.setItem("enabeledDark",'true');
+        imgHome.style.opacity ="0.8"
     }
     else{
         headerBG = "light"
-        header.style.backgroundColor = "rgb(222, 222, 222)";
+        header.style.backgroundColor = "#FFFFFA";
         header.style.color = "black"
         modeText.innerText = "Dark Mode"
         localStorage.removeItem("enabeledDark")
+        imgHome.style.opacity ="1"
         
     }
 };
